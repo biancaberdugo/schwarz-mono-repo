@@ -1,0 +1,17 @@
+site_name: Schwarz Mono Repo - Interview
+theme:
+  name: material
+  features:
+    - content.action.edit
+    - navigation.expand
+    - navigation.sections
+    - navigation.instant
+    - toc.integrate
+    - header.autohide
+    - content.code.annotate
+    - content.code.copy
+    - content.images.zoom
+nav:
+  - Home: index.md
+  - Challenge: challenge.md
+  - Architecture: architecture.md
