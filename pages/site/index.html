@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="architecture/">
+        <link rel="next" href="challenge/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#problem-statement" class="md-skip">
+        <a href="#project-simulation-example" class="md-skip">
           Skip to content
         </a>
       
@@ -239,28 +239,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#assignment-cloud-platform-engineer" class="md-nav__link">
+  <a href="#components-and-services" class="md-nav__link">
     <span class="md-ellipsis">
-      ASSIGNMENT - CLOUD PLATFORM ENGINEER
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ASSIGNMENT - CLOUD PLATFORM ENGINEER">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#assignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assignment
+      Components and Services
     </span>
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset Simulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset Simulation">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#simulation-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction:
+      Simulation Details
     </span>
   </a>
   
@@ -275,6 +275,27 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="challenge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Challenge
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -316,45 +337,50 @@
 
 
 
-<h1 id="problem-statement">Problem Statement</h1>
-<h2 id="assignment-cloud-platform-engineer">ASSIGNMENT - CLOUD PLATFORM ENGINEER</h2>
-<p>As mentioned during the first call, next interview will be a technical use case. We would kindly ask you
-to work on this ahead of the next interview. Also, it would be great if you could send us your
-solution/ideas before the interview, so that we can review it.</p>
-<h3 id="assignment">Assignment</h3>
-<p>The goal of this assignment is not to develop a perfect solution, but to get a better understanding of
-your skills and experience in the Cloud and Software Engineering field as well as see how you approach
-certain questions and challenges.</p>
-<p>If you have any questions regarding the assignment, please don't hesitate to get in touch with us at any
-time.  General:
-- You can use any programming language (our recommendation is Python) or design pattern
-- The solution should be flexible, stable and scalable as well as ensure a good code and
-architecture quality (we want to bring this into production as a next step)
-- We don't expect you to spin up any costly machines in the cloud or elsewhere to process
-Gigabytes or Terabytes of data or showcase infrastructure
-- Unless stated otherwise, you can use any tool from one of the major cloud providers or any
-other system that you like (our preference is StackIT, Azure or GCP)</p>
-<h3 id="introduction">Introduction:</h3>
-<p>Imagine we are running a global business operating taxis in major cities of the world, in total its more
-than 11.000 cars worldwide. Our taxis are operating 24/7/365 and complete small or large trips
-throughout the day. From our headquarters we have to ensure many things in order to run the business,
-e.g. we have to ensure receipts are generated for every trip, our management can review various
-metrics from the trips (e.g. revenue per city, length of the trips, ...), we can prevent fraud or plan where
-we place our taxis within the city throughout the day.</p>
+<h1 id="project-simulation-example">Project Simulation Example</h1>
+<p>This project was designed to simulate critical components of the proposed architecture. The primary goal is to provide a realistic scenario demonstrating interactions between several system components.</p>
+<h2 id="components-and-services">Components and Services</h2>
+<p>The simulation includes the following key components and services:</p>
 <ul>
-<li>Architecture:</li>
-<li>Design an architecture that allows us to collect, process and analyze data from our taxi
-  operation as well as send data back to individual cars and communicate with our users</li>
-<li>Automation</li>
-<li>Develop a script to automate the setup and maintenance of your architecture. Its ok if
-  its only parts of it or 2-3 components and not the whole architecture. We should be able
-  to rollout the components but also update the whole or individual parts of it</li>
-<li>Data Exfiltration and Infiltration</li>
-<li>Think about how to secure the data we are collecting for this use case and the platform
-    in general. What tools and approaches can be used to minimize the risk of unwanted</li>
-<li>Vision</li>
-<li>Create a vision for the future of our taxi company data platform, what are going to be
-      important pillars and elements that we should focus on in the next 2-3 years.</li>
+<li><strong>BFF API Example:</strong> </li>
+<li>Provides a simplified backend-for-frontend interface tailored specifically for an application.</li>
+<li>Includes necessary infrastructure to deploy the BFF API into Kubernetes.</li>
+<li>Generates mock responses representing results from hypothetical backend services.</li>
+<li>
+<p>Publishes simulated trip data to a Pub/Sub topic.</p>
+</li>
+<li>
+<p><strong>Pub/Sub to BigQuery Sink:</strong></p>
+</li>
+<li>Simulates the ingestion pipeline, transferring GPS coordinates published by the application into a BigQuery landing layer.</li>
+</ul>
+<h2 id="dataset-simulation">Dataset Simulation</h2>
+<p>The provided dataset simulates realistic GPS coordinates for vehicles traveling along routes between selected cities. Each GPS record contains the following data:</p>
+<ul>
+<li><strong>Timestamp</strong> indicating when the GPS coordinate was captured.</li>
+<li><strong>Latitude and Longitude</strong> representing vehicle location.</li>
+<li>Clearly defined <strong>Start and End Coordinates</strong> for each trip.</li>
+<li><strong>Car ID</strong></li>
+<li><strong>City ID</strong></li>
+<li><strong>Trip ID</strong></li>
+<li><strong>User ID</strong></li>
+<li><strong>Driver ID</strong></li>
+</ul>
+<h3 id="simulation-details">Simulation Details</h3>
+<ul>
+<li><strong>Cities Included:</strong></li>
+<li>San Francisco</li>
+<li>Chicago</li>
+<li>Seattle</li>
+<li>New York</li>
+<li>
+<p>Los Angeles</p>
+</li>
+<li>
+<p><strong>Number of Cars Simulated:</strong> 1,000</p>
+</li>
+<li><strong>Total Number of Trips:</strong> 5,000 (5 trips per car)</li>
+<li><strong>Average Duration per Trip:</strong> 15 minutes</li>
 </ul>
 
 
