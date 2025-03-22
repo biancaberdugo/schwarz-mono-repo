@@ -6,5 +6,4 @@ module "common" {
   region     = local.region
   zone       = local.zone
   project_id = local.project_id
-
 }
