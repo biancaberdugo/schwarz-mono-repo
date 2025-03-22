@@ -1,0 +1,43 @@
+
+# Project Simulation Example
+
+This project was designed to simulate critical components of the proposed architecture. The primary goal is to provide a realistic scenario demonstrating interactions between several system components.
+
+## Components and Services
+
+The simulation includes the following key components and services:
+
+- **BFF API Example:** 
+  - Provides a simplified backend-for-frontend interface tailored specifically for an application.
+  - Includes necessary infrastructure to deploy the BFF API into Kubernetes.
+  - Generates mock responses representing results from hypothetical backend services.
+  - Publishes simulated trip data to a Pub/Sub topic.
+
+- **Pub/Sub to BigQuery Sink:**
+  - Simulates the ingestion pipeline, transferring GPS coordinates published by the application into a BigQuery landing layer.
+
+## Dataset Simulation
+
+The provided dataset simulates realistic GPS coordinates for vehicles traveling along routes between selected cities. Each GPS record contains the following data:
+
+- **Timestamp** indicating when the GPS coordinate was captured.
+- **Latitude and Longitude** representing vehicle location.
+- Clearly defined **Start and End Coordinates** for each trip.
+- **Car ID**
+- **City ID**
+- **Trip ID**
+- **User ID**
+- **Driver ID**
+
+### Simulation Details
+
+- **Cities Included:**
+  - San Francisco
+  - Chicago
+  - Seattle
+  - New York
+  - Los Angeles
+
+- **Number of Cars Simulated:** 1,000
+- **Total Number of Trips:** 5,000 (5 trips per car)
+- **Average Duration per Trip:** 15 minutes

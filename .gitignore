@@ -1,1 +1,6 @@
 /.idea
+/infrastructure/dev/.terraform/providers/registry.terraform.io
+/infrastructure/dev/.terraform
+infrastructure/dev/.terraform.lock.hcl
+infrastructure/dev/terraform.tfstate.backup
+infrastructure/dev/terraform.tfstate
