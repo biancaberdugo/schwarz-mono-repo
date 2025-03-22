@@ -28,6 +28,7 @@ The provided dataset simulates realistic GPS coordinates for vehicles traveling 
 - **Trip ID**
 - **User ID**
 - **Driver ID**
+- **Event ID**
 
 ### Simulation Details
 
