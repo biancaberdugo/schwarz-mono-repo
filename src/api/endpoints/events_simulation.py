@@ -27,7 +27,7 @@ router_v1 = create_router_for_version(1)
 async def send_simulate_metrics_taxi_coordinates(
     simulation_name: SimulationFiles = Query(
         alias="simulation_name",
-        default=["GPS_Car_Trip_Simulation_large_5k_events"],
+        default="GPS_Car_Trip_Simulation_small_set_events",
         description="The name of the simulation to be sent.",
     ),
     taxi_route_service: TaxiRouteService = Depends(

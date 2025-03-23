@@ -8,6 +8,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class EventsStreamingType(StrEnum):
     PUBSUB: Literal["PUBSUB"] = "PUBSUB"
     KAFKA: Literal["KAFKA"] = "KAFKA"
+    MOCK: Literal["MOCK"] = "MOCK"
 
 
 class EventsBaseConfig(BaseSettings):
@@ -18,10 +19,13 @@ class EventsBaseConfig(BaseSettings):
 
 
 class PubsubEventsConfig(EventsBaseConfig):
-    model_config = SettingsConfigDict(env_nested_delimiter="__", extra="allow")
-
     project_id: str = Field(validation_alias="PUBSUB__PROJECT_ID")
     type: EventsStreamingType = EventsStreamingType.PUBSUB
+
+
+class MockEventsConfig(EventsBaseConfig):
+    project_id: str = Field(validation_alias="MOCK__PROJECT_ID")
+    type: EventsStreamingType = EventsStreamingType.MOCK
 
 
 class AppConfig(BaseSettings):

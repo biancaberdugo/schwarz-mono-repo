@@ -9,7 +9,9 @@ from src.api.dependencies.config import (
     EventsStreamingType,
     EventsBaseConfig,
     PubsubEventsConfig,
+    MockEventsConfig,
 )
+
 from src.api.services.taxi_route_service import TaxiRouteService
 
 
@@ -41,6 +43,11 @@ def get_external_dependencies() -> ServicesDependencies:
         events_config = PubsubEventsConfig
     elif config.events_streaming_type == EventsStreamingType.KAFKA:
         raise NotImplementedError("Kafka is not implemented yet")
+    elif config.events_streaming_type == EventsStreamingType.MOCK:
+        from src.api.dependencies.events.mock import MockEvents
+
+        events_streaming = MockEvents
+        events_config = MockEventsConfig
 
     return ServicesDependencies(
         events_streaming=events_streaming, events_config=events_config
