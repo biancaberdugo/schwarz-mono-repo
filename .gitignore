@@ -4,3 +4,4 @@
 infrastructure/dev/.terraform.lock.hcl
 infrastructure/dev/terraform.tfstate.backup
 infrastructure/dev/terraform.tfstate
+/src/api/.env
