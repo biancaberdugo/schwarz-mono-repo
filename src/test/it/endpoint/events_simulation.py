@@ -5,6 +5,11 @@ from src.api.models.dto.v1.taxi_route import (
     TaxiRouteMetricMultiEndpointSuccessResponseV1,
 )
 
+# This class shows how can we simulate the calls to the endpoints to execute e2e tests with API
+# Simulating real calls to our endpoints
+# TODO: replace the staging configuration for instead of using real pubsub to use the mocked version
+# Or consider something such as localstack gcp equivalent
+
 
 def test_simulate_metrics_v1(app_client):
     result = post_send_simulate_metrics_taxi_coordinates(client=app_client)

@@ -4,7 +4,12 @@ from typing import Dict, cast, Optional, Tuple
 from fastapi import FastAPI, APIRouter
 from starlette.responses import RedirectResponse
 
-from src.api.endpoints import RouterInfo, router_versions, events_simulation
+from src.api.endpoints import (
+    RouterInfo,
+    router_versions,
+    events_simulation,
+    trips_simulation,
+)
 
 app_router = APIRouter()
 
@@ -72,6 +77,7 @@ def setup_routing(app: FastAPI) -> Dict[str, RouterInfo]:
     routers_info = {}
 
     routers_info.update(_include_all_routers(app, events_simulation))
+    routers_info.update(_include_all_routers(app, trips_simulation))
 
     app.include_router(app_router, include_in_schema=False)
 

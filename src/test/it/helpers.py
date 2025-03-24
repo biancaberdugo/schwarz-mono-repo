@@ -3,6 +3,8 @@ from typing import Optional, Dict, Any
 from requests import Response
 from starlette.testclient import TestClient
 
+from src.api.models.dto.v1.trips import TripRequestV1
+
 
 def _post(
     client: TestClient,
@@ -21,4 +23,10 @@ def post_send_simulate_metrics_taxi_coordinates(client: TestClient):
     return _post(
         client=client,
         endpoint="/api/v1/simulate-events/taxi-route/trip-coordinates/",
+    )
+
+
+def post_simulate_new_trip_request(client: TestClient, payload: TripRequestV1):
+    return _post(
+        client=client, endpoint="/api/v1/trips/new/", payload=payload.model_dump()
     )

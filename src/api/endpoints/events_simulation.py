@@ -33,7 +33,7 @@ async def send_simulate_metrics_taxi_coordinates(
     taxi_route_service: TaxiRouteService = Depends(
         Provide[ServiceContainer.taxi_route_service]
     ),
-) -> list:
+) -> TaxiRouteMetricMultiEndpointSuccessResponseV1:
     taxi_events_holder = TaxiRouteMetricsEvents.from_json_path(
         path_from_src=f"simulation/{simulation_name}.json"
     )

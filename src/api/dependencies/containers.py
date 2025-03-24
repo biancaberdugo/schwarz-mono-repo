@@ -13,6 +13,7 @@ from src.api.dependencies.config import (
 )
 
 from src.api.services.taxi_route_service import TaxiRouteService
+from src.api.services.trips import TripsService
 
 
 def get_config() -> AppConfig:
@@ -72,3 +73,4 @@ class ServiceContainer(containers.DeclarativeContainer):
         events_streaming=__external_dependencies.events_streaming,
         events_config=__external_dependencies.events_config,
     )
+    trips_service = providers.Factory(TripsService)
