@@ -1,5 +1,3 @@
-from typing import List
-
 from dependency_injector.wiring import inject, Provide
 from fastapi import Depends, Query
 from starlette import status

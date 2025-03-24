@@ -4,7 +4,7 @@ from src.api.models.dto.v1.trips import (
     TripResponseV1,
     TripResponseSingleDataV1,
 )
-from src.test.it.helpers import post_simulate_new_trip_request
+from tests.it.helpers import post_simulate_new_trip_request
 
 
 def test_new_trip_v1(app_client):

@@ -4,7 +4,6 @@ from fastapi import FastAPI
 from src.api.dependencies.containers import (
     get_config,
     ServiceContainer,
-    ExternalDependenciesContainer,
 )
 from src.api.openapi import setup_openapi_routers
 
@@ -22,4 +21,4 @@ setup_openapi_routers(app)
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+    uvicorn.run("src.api.main:app", host="0.0.0.0", port=8000)

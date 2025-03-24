@@ -5,7 +5,6 @@ from src.api.dependencies.containers import ServiceContainer
 
 @pytest.fixture(name="container_service")
 def get_services():
-
     container = ServiceContainer()
     return container
 
