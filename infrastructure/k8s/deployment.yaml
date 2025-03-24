@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: bff-api
-          image: REGION-docker.pkg.dev/PROJECT_ID/REPO/IMAGE_NAME:latest
+          image: us-central1-docker.pkg.dev/decisive-cinema-296013/bff-api:latest
           ports:
             - containerPort: 8080
 
@@ -38,7 +38,7 @@ kind: Ingress
 metadata:
   name: bff-api-ingress
   annotations:
-    kubernetes.io/ingress.class: "gce"
+    kubernetes.io/ingress.class: "gce"  # GKE uses GCE ingress controller
 spec:
   rules:
     - http:
