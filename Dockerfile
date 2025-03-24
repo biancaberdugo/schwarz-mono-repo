@@ -1,4 +1,4 @@
-FROM python:3.10-slim-buster AS base-image
+FROM python:3.11-slim-buster AS base-image
 
 RUN apt-get update && apt-get upgrade -y && apt-get clean
 
@@ -27,6 +27,8 @@ RUN pip install --no-input --no-cache-dir -r requirements.txt
 COPY --chown=app:app . src/
 
 FROM base-image AS service
+
+WORKDIR /app/src
 
 ENTRYPOINT ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8080"]
 
