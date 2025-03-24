@@ -17,6 +17,9 @@ spec:
           image: us-central1-docker.pkg.dev/decisive-cinema-296013/main/bff-api:latest
           ports:
             - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: bff-api-config
 
 ---
 apiVersion: v1

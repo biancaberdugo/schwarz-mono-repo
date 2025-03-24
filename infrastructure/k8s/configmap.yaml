@@ -1,0 +1,15 @@
+# configmap.yaml (or add to your k8s manifest file before the Deployment)
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bff-api-config
+data:
+  ENV: "local"
+  CLOUD: "GCP"
+  VERSION: "0.0.1"
+  SERVICE: "BFF API Taxi Service"
+  TEAM: "schwarz_data_platform"
+  PUBSUB__PROJECT_ID: "decisive-cinema-296013"
+  TAXI_ROUTE_TOPIC_ID: "route-metrics-topic"
+  EVENTS_STREAMING_TYPE: "PUBSUB"
+
