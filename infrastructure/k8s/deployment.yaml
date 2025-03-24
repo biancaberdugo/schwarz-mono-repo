@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: bff-api
-          image: us-central1-docker.pkg.dev/decisive-cinema-296013/bff-api:latest
+          image: us-central1-docker.pkg.dev/decisive-cinema-296013/bff-api/server:latest
           ports:
             - containerPort: 8080
 
