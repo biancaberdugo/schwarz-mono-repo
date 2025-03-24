@@ -23,7 +23,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t us-central1-docker.pkg.dev/decisive-cinema-296013/main/bff-api:latest .
+          docker build --target service -t us-central1-docker.pkg.dev/decisive-cinema-296013/main/bff-api:latest .
 
       - name: Push image to registry
         run: |
