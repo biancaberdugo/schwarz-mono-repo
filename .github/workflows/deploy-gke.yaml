@@ -1,0 +1,31 @@
+name: CD - Deploy to GKE
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Get GKE credentials
+        uses: google-github-actions/get-gke-credentials@v1
+        with:
+          cluster_name: bff-ccluster
+          location: us-central1-c
+          project_id: decisive-cinema-296013
+
+      - name: Deploy to GKE using kubectl
+        run: |
+          kubectl apply -f infrastructure/k8s/backendconfig.yaml
+          kubectl apply -f infrastructure/k8s/deployment.yaml

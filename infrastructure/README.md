@@ -15,9 +15,14 @@ This document provides instructions to set up the infrastructure using Terraform
    brew upgrade hashicorp/tap/terraform
    ```
 
-2. Install Google Cloud SDK:
+2. Setup Google Cloud SDK:
    [Google Cloud SDK Installation Guide](https://cloud.google.com/sdk/docs/install)
 
+   Init to project:
+ ```sh
+    gcloud init  
+   ```
+   And authenticate:
    ```sh
    gcloud auth application-default login
    ```

@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bff-api-config
+data:
+  ENV: "local"
+  CLOUD: "GCP"
+  VERSION: "0.0.1"
+  SERVICE: "BFF API Taxi Service"
+  TEAM: "schwarz_data_platform"
+  PUBSUB__PROJECT_ID: "decisive-cinema-296013"
+  TAXI_ROUTE_TOPIC_ID: "route-metrics-topic"
+  EVENTS_STREAMING_TYPE: "PUBSUB"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bff-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bff-api
+  template:
+    metadata:
+      labels:
+        app: bff-api
+    spec:
+      containers:
+        - name: bff-api
+          image: us-central1-docker.pkg.dev/decisive-cinema-296013/main/bff-api:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: bff-api-config
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bff-api-service
+  annotations:
+    beta.cloud.google.com/backend-config: '{"default": "bff-api-backendconfig"}'
+spec:
+  selector:
+    app: bff-api
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: NodePort
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bff-api-ingress
+  annotations:
+    kubernetes.io/ingress.class: "gce"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: bff-api-service
+                port:
+                  number: 80
