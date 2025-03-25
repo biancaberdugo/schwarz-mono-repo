@@ -96,3 +96,7 @@ pytest tests/unit
 ```bash
 pytest tests/it
 ```
+
+## ✅ Deployment
+
+Automatically executed by merging the code to main branch. It builds the Docker image and deploy changes over GKE

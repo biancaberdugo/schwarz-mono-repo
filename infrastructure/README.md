@@ -35,7 +35,7 @@ To format the Terraform code recursively, run:
 terraform fmt -recursive
 ```
 
-## Initialize and Apply Terraform Configuration
+## [LOCAL] Initialize and Apply Terraform Configuration 
 
 Navigate to the `infrastructure/dev` directory and run the following commands:
 
