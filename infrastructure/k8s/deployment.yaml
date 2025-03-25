@@ -61,7 +61,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /docs
+          - path: /
             pathType: Prefix
             backend:
               service:
