@@ -54,4 +54,4 @@ The provided dataset simulates realistic GPS coordinates for vehicles traveling 
 
 Accessible at http://35.241.50.52/docs
 
-For local executions check the [README.md](../../src/README.md)
+For local executions check [here](src/README.md)

@@ -1,4 +1,3 @@
-```markdown
 # Infrastructure Setup
 
 This document provides instructions to set up the infrastructure using Terraform and Google Cloud SDK.
