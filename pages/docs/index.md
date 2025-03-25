@@ -8,13 +8,19 @@ This project was designed to simulate critical components of the proposed archit
 The simulation includes the following key components and services:
 
 - **BFF API Example:** 
-  - Provides a simplified backend-for-frontend interface tailored specifically for an application.
-  - Includes necessary infrastructure to deploy the BFF API into Kubernetes.
-  - Generates mock responses representing results from hypothetical backend services.
-  - Publishes simulated trip data to a Pub/Sub topic.
 
+  - Provides a simplified backend-for-frontend interface tailored specifically for an application.
+  - Generates mock responses representing results from hypothetical backend services.
+  
 - **Pub/Sub to BigQuery Sink:**
+
   - Simulates the ingestion pipeline, transferring GPS coordinates published by the application into a BigQuery landing layer.
+
+- **Infra as code:**
+  - Code executed locally for managing resources at GCP
+
+- **Github Actions**
+  - Simulates minimum CD for building API image and deployments on GKE
 
 ## Dataset Simulation
 
