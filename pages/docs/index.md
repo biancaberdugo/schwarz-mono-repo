@@ -49,6 +49,8 @@ The provided dataset simulates realistic GPS coordinates for vehicles traveling 
 - **Total Number of Trips:** 5,000 (5 trips per car)
 - **Average Duration per Trip:** 15 minutes
 
+![img.png](downloads/img.png)
+
 ## Public endpoint sample
 
 Accessible [here](http://35.241.50.52/docs)
