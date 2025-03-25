@@ -372,17 +372,31 @@
 <h2 id="components-and-services">Components and Services</h2>
 <p>The simulation includes the following key components and services:</p>
 <ul>
-<li><strong>BFF API Example:</strong> </li>
-<li>Provides a simplified backend-for-frontend interface tailored specifically for an application.</li>
-<li>Includes necessary infrastructure to deploy the BFF API into Kubernetes.</li>
-<li>Generates mock responses representing results from hypothetical backend services.</li>
 <li>
-<p>Publishes simulated trip data to a Pub/Sub topic.</p>
+<p><strong>BFF API Example:</strong> </p>
+</li>
+<li>
+<p>Provides a simplified backend-for-frontend interface tailored specifically for an application.</p>
+</li>
+<li>
+<p>Generates mock responses representing results from hypothetical backend services.</p>
 </li>
 <li>
 <p><strong>Pub/Sub to BigQuery Sink:</strong></p>
 </li>
-<li>Simulates the ingestion pipeline, transferring GPS coordinates published by the application into a BigQuery landing layer.</li>
+<li>
+<p>Simulates the ingestion pipeline, transferring GPS coordinates published by the application into a BigQuery landing layer.</p>
+</li>
+<li>
+<p><strong>Infra as code:</strong></p>
+</li>
+<li>
+<p>Code executed locally for managing resources at GCP</p>
+</li>
+<li>
+<p><strong>Github Actions</strong></p>
+</li>
+<li>Simulates minimum CD for building API image and deployments on GKE</li>
 </ul>
 <h2 id="dataset-simulation">Dataset Simulation</h2>
 <p>The provided dataset simulates realistic GPS coordinates for vehicles traveling along routes between selected cities. Each GPS record contains the following data:</p>
