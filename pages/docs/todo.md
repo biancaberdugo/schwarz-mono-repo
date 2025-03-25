@@ -23,6 +23,10 @@ This document outlines the key upcoming tasks and improvements required for this
 - [ ] Integrate **Argo CD** for GitOps-based continuous delivery and progressive delivery strategies.
 - [ ] Optimize build, deploy, and release pipelines using Argo workflows where needed.
 
+### 5. Code Formatting & Linting
+- [ ] Add automation to enforce code quality standards.
+- [ ] Integrate tools such as **pylint**, **black**, and **ruff** in the CI pipeline.
+
 ---
 
 ## Contributing

@@ -65,6 +65,22 @@ python -m src.api.main
 
 Alternatively, you can run it directly from your **PyCharm** environment for better debugging and project management.
 
+### 3. Endpoints
+
+#### Send Simulation Metrics to Pub/Sub
+```
+/api/v1/simulate-events/taxi-route/trip-coordinates/
+```
+
+Select a dataset from the list and each line will be emitted as an event to Pub/Sub.
+
+#### Simulate Cross-Service Communication
+```
+/api/v1/trips/new
+```
+
+**Simulates** a flow receiving a DTO from the application, invokes an external service, and translates the result back into a DTO understandable by the app.
+
 ---
 
 ## ✅ Running Tests
