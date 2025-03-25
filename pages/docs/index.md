@@ -51,5 +51,5 @@ The provided dataset simulates realistic GPS coordinates for vehicles traveling 
 
 ## Public endpoint sample
 
-Accessible at [here](http://35.241.50.52/docs)
+Accessible [here](http://35.241.50.52/docs)
 
