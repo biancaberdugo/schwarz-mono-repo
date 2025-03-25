@@ -9,6 +9,7 @@ This document outlines the key upcoming tasks and improvements required for this
 ### 1. Continuous Integration (CI)
 - [ ] Implement CI pipelines to execute unit tests **before** building Docker images.
 - [ ] Ensure pipelines fail early if tests do not pass.
+- [ ] Implement more unit and it tests
 
 ### 2. Security Improvements
 - [ ] Enhance cloud security by implementing stricter access control and securing credentials/tokens.
