@@ -1,7 +1,7 @@
 
 # Project Simulation Example
 
-This project was designed to simulate critical components of the proposed architecture. The primary goal is to provide a realistic scenario demonstrating interactions between several system components.
+This project was designed to simulate critical components of the proposed architecture.
 
 ## Components and Services
 
