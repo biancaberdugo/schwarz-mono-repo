@@ -27,5 +27,5 @@ jobs:
 
       - name: Deploy to GKE using kubectl
         run: |
-          kubectl apply -f k8s/backendconfig.yaml
+          kubectl apply -f infrastructure/k8s/backendconfig.yaml
           kubectl apply -f infrastructure/k8s/deployment.yaml
