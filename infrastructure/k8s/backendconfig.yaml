@@ -4,5 +4,5 @@ metadata:
   name: bff-api-backendconfig
 spec:
   healthCheck:
-    requestPath: /
+    requestPath: /docs
     port: 8080
