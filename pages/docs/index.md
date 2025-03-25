@@ -17,7 +17,7 @@ The simulation includes the following key components and services:
   - Simulates the ingestion pipeline, transferring GPS coordinates published by the application into a BigQuery landing layer.
 
 - **Infra as code:**
-  - Code executed locally for managing resources at GCP
+  - Terraform code executed locally for managing resources at GCP
 
 - **Github Actions**
   - Simulates minimum CD for building API image and deployments on GKE
