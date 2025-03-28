@@ -1,6 +1,7 @@
 FROM python:3.11-slim-buster AS base-image
 
 RUN apt-get update && apt-get upgrade -y && apt-get clean
+RUN apt-get install gcc python3-dev -y
 
 USER root
 
